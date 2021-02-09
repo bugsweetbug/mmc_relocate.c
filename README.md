@@ -1,1 +1,3 @@
 # mmc_relocate.c
+从SD卡的49扇区，把uboot拷贝到内存0x34800000
+从SD卡的1000扇区，把kernel拷贝到20008000
