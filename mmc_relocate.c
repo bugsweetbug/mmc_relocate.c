@@ -27,10 +27,10 @@ void copy_code_to_dram(void)
         ret = copy_bl2(0, sec_no,       128,(unsigned int *)dest, 0); 
         ret = copy_bl2(0, sec_no + 128, 128,(unsigned int *)(dest + 0x10000), 0); 
         ret = copy_bl2(0, sec_no + 256, 128,(unsigned int *)(dest + 0x20000), 0);
-		ret = copy_bl2(0, sec_no + 384, 128,(unsigned int *)(dest + 0x30000), 0);		
+	ret = copy_bl2(0, sec_no + 384, 128,(unsigned int *)(dest + 0x30000), 0);		
 			
 		//烧写内核
-		for(int = 0; i < 5*1024; i++) //5*1024=5M  内核4.8M
+		for(i = 0; i < 5*1024; i++) //5*1024=5M  内核4.8M
 		{
 			copy_bl2(0, uImage_sec_no + i*2, 2, (unsigned int *)(uImage_dest + i*1024), 0);
 		}
